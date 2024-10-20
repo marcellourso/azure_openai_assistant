@@ -1,0 +1,11 @@
+azure openai assistant basics
+https://www.youtube.com/watch?v=9DO1CVUizlM
+
+rag and azure ai search
+https://www.youtube.com/watch?v=VKDoaXDT30A
+
+openai and cognitive serch
+https://www.youtube.com/watch?v=M_1mkPIwuJE
+
+real time audio ai search openai
+https://www.youtube.com/watch?v=vXJka8xZ9Ko

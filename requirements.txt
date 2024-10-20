@@ -1,5 +1,9 @@
 flask
+flask-cors
 pytesseract
 pdf2image
 PyPDF2
 python-docx
+fpdf
+pymupdf
+pillow
