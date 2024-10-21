@@ -6,10 +6,11 @@
     <title>Upload File</title>
 </head>
 <body>
-    <form action="http://127.0.0.1:5000/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" />
+    <h1>Upload your PDF</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required />
         <button type="submit">Upload</button>
+        <button type="reset">Reset</button>
     </form>
 </body>
 </html>
-

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR PDF Conversion Tool</title>
+</head>
+<body>
+    <h1>Seleziona la cartella radice per eseguire l'OCR sui PDF</h1>
+    <form action="/process" method="POST">
+        <label for="folder">Percorso cartella:</label>
+        <input type="text" id="folder" name="folder" required />
+        <button type="submit">Avvia processo</button>
+    </form>
+</body>
+</html>
