@@ -22,4 +22,4 @@ COPY . .
 EXPOSE 5000
 
 # Comando per avviare l'applicazione Flask
-CMD ["python", "filterfitzFC.py"]
+CMD ["python", "filterfitzFC64.py"]
