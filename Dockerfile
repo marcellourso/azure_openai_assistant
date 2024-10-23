@@ -16,4 +16,3 @@ EXPOSE 5000
 
 # Comando per avviare l'app Flask
 CMD ["python3", "Socrfolder2.py"]
-
