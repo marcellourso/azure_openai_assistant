@@ -3,7 +3,8 @@ flask-cors
 pytesseract
 pdf2image
 PyPDF2
-python-docx
-fpdf
+#python-docx
+#fpdf
 pymupdf
 pillow
+ocrmypdf
