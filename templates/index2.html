@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR PDF Conversion Tool</title>
+</head>
+<body>
+    <h1>Esegui il copia e incolla del percorso della la cartella radice per eseguire l'OCR sui PDF</h1>
+    <form id="upload-form" action="/process" method="POST">
+        <label for="folder">Percorso cartella:</label>
+        <input type="text" id="folder" name="folder" required />
+        <button type="submit" id="submit-button">Avvia processo</button>
+    </form>
+
+    <div id="progress">
+        <h2 id="progress-status">Stato del processo: In attesa...</h2>
+    </div>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        const submitButton = document.getElementById('submit-button');
+        const progressStatus = document.getElementById('progress-status');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); // Previeni l'invio automatico del modulo
+
+            // Cambia lo stato all'avvio del processo
+            progressStatus.innerText = "Stato del processo: Lavoro in corso con successo...";
+            submitButton.disabled = true;
+            submitButton.innerText = "Elaborazione in corso...";
+
+            // Crea un oggetto FormData per inviare il percorso della cartella
+            const formData = new FormData(form);
+
+            try {
+                // Invia la richiesta al server usando fetch
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                // Aggiorna lo stato del processo
+                if (response.ok) {
+                    progressStatus.innerText = "Stato del processo: Processo completato!";
+                    alert(result.message);
+                } else {
+                    progressStatus.innerText = "Stato del processo: Ho riscontrato errori sto risolvendo...";
+                }
+            } catch (error) {
+                progressStatus.innerText = "Stato del processo: Errore irreversibile...";
+            } finally {
+                // Riabilita il pulsante alla fine del processo
+                submitButton.disabled = false;
+                submitButton.innerText = "Avvia processo";
+            }
+        });
+
+        // Imposta lo stato iniziale quando la pagina è pronta
+        window.onload = function() {
+            progressStatus.innerText = "Stato del processo: In attesa...";
+        };
+    </script>
+</body>
+</html>
