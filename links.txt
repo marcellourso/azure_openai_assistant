@@ -1,11 +1,32 @@
-azure openai assistant basics
+azure openai assistant basics (july 1, 2024)
 https://www.youtube.com/watch?v=9DO1CVUizlM
 
-rag and azure ai search
+azure ai search and openai (oct 8, 2024)
+https://www.youtube.com/watch?v=ww5RXHeGfPU&t=1818s
+
+azure openai assistant and azure ai search (october 20,2024)
+https://www.youtube.com/watch?v=PfewgZJunb8
+
+rag and azure ai search (dec 4, 2023)
 https://www.youtube.com/watch?v=VKDoaXDT30A
 
-openai and cognitive serch
+openai and cognitive serch (sept 20, 2023)
 https://www.youtube.com/watch?v=M_1mkPIwuJE
 
-real time audio ai search openai
+real time audio ai search openai (oct 3, 2024)
 https://www.youtube.com/watch?v=vXJka8xZ9Ko
+
+deploy assistant con codice e template (botpress)
+https://www.youtube.com/watch?v=3FInhQLMS0Q&t=3s
+
+come sopra ma spiegato meglio
+https://www.youtube.com/watch?app=desktop&v=6zS0LToLOiA
+
+come sopra in italiano
+https://www.youtube.com/watch?v=VjS0tksJcBk&t=20s
+
+repository con rag demo su azure openai sept 2024
+https://github.com/retkowsky/Azure-OpenAI-demos
+
+repository ufficiale azureai samples di microsoft
+https://github.com/Azure-Samples/azureai-samples/tree/main/scenarios
