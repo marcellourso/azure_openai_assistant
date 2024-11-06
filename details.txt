@@ -1,0 +1,16 @@
+OPENAI:
+-------
+key: EszyDWeMtaONdmuCWmU9LyzzrZ1TmPPJpS0n3uSXSfz0vf6zy0LqJQQJ99AKACYeBjFXJ3w3AAABACOGCl5i
+endpoint: https://dueoai.openai.azure.com/
+
+
+AI SEARCH:
+----------
+primary key: 
+endpoint url: 
+
+
+STORAGE ACCOUNT:
+----------------
+key: dtPtM6CXe3JlNDMh+5VNlK/gOz/wcftgVfwh8i/yzZJdRUOgOvRD5+IH9Y3v0kfKAL6uzG1M0AQr+AStqWbPxA==
+connection string: DefaultEndpointsProtocol=https;AccountName=duestorage2;AccountKey=dtPtM6CXe3JlNDMh+5VNlK/gOz/wcftgVfwh8i/yzZJdRUOgOvRD5+IH9Y3v0kfKAL6uzG1M0AQr+AStqWbPxA==;EndpointSuffix=core.windows.net

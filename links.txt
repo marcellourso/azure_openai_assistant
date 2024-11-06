@@ -30,3 +30,10 @@ https://github.com/retkowsky/Azure-OpenAI-demos
 
 repository ufficiale azureai samples di microsoft
 https://github.com/Azure-Samples/azureai-samples/tree/main/scenarios
+
+
+azure AI DOCUMENT INTELLIGENT PLATFORM integrazione di tool per documenti intelligence
+https://www.youtube.com/watch?v=Ry4VAesjU4I
+
+assegnazione IAM per openai
+https://learn.microsoft.com/it-it/azure/ai-services/openai/how-to/role-based-access-control
