@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import ChatBox from './components/ChatBox';
+import ResponseBox from './components/ResponseBox';
 import './App.css';
 
 function App() {
+  const [selectedThread, setSelectedThread] = useState(null);
+  const [responses, setResponses] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Sidebar
+        selectedThread={selectedThread}
+        setSelectedThread={setSelectedThread}
+      />
+      <div className="chat-container">
+        <ResponseBox responses={responses} />
+        <ChatBox selectedThread={selectedThread} setResponses={setResponses} />
+      </div>
     </div>
   );
 }
