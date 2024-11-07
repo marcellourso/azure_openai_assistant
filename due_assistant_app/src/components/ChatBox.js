@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { FaPaperPlane, FaPlus } from 'react-icons/fa';
-import { createThread } from '../services/api';
+import { createThread, sendMessage } from '../services/mockApi'; // Cambia `mockApi` con `api` per usare il backend reale
 
 Modal.setAppElement('#root'); // Necessario per l'accessibilità con react-modal
 
@@ -10,12 +10,17 @@ function ChatBox({ selectedThread, setResponses, setThreads }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newThreadTitle, setNewThreadTitle] = useState("");
 
-  // Funzione per inviare il messaggio
+  // Funzione per inviare il messaggio al thread selezionato
   const handleSendMessage = async () => {
     if (selectedThread) {
-      const response = await sendMessage(selectedThread.id, message);
-      setResponses(prevResponses => [...prevResponses, response]);
-      setMessage("");
+      try {
+        const response = await sendMessage(selectedThread.id, message);
+        console.log("Risposta API:", response); // Dovrebbe mostrare solo `{ response: "..." }`
+        setResponses(prevResponses => [...prevResponses, response.response]);
+        setMessage("");
+      } catch (error) {
+        console.error("Errore nell'invio del messaggio:", error);
+      }
     } else {
       alert("Seleziona un thread prima di inviare un messaggio.");
     }
@@ -36,7 +41,7 @@ function ChatBox({ selectedThread, setResponses, setThreads }) {
   const handleCreateThread = async () => {
     if (newThreadTitle.trim()) {
       const newThread = await createThread(newThreadTitle);
-      setThreads(prevThreads => [...prevThreads, newThread]);
+      setThreads(prevThreads => [...prevThreads, newThread]); // Aggiorna l'elenco dei thread
       setIsModalOpen(false);
       setNewThreadTitle("");
     } else {

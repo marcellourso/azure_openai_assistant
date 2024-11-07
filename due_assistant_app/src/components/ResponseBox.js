@@ -4,7 +4,9 @@ function ResponseBox({ responses }) {
   return (
     <div className="response-box">
       {responses.map((response, index) => (
-        <p key={index}>{response}</p>
+        <div key={index} className="response">
+          {typeof response === 'string' ? response : JSON.stringify(response)} {/* Converte eventuali oggetti in stringhe per il debug */}
+        </div>
       ))}
     </div>
   );

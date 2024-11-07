@@ -1,25 +1,29 @@
 import React from 'react';
 
-function Sidebar({ selectedThread, setSelectedThread }) {
-  const handleUpload = (event) => {
-    // Implementazione del caricamento file
+function Sidebar({ threads, selectedThread, setSelectedThread }) {
+  const handleSelectChange = (e) => {
+    const threadId = e.target.value;
+    console.log("Thread ID selezionato:", threadId); // Verifica l'ID selezionato
+
+    const selected = threads.find(thread => thread.id === threadId);
+    console.log("Thread trovato:", selected); // Verifica il thread trovato
+
+    setSelectedThread(selected); // Aggiorna selectedThread con il thread selezionato
   };
 
   return (
     <div className="sidebar">
       <select
-        onChange={(e) => setSelectedThread(e.target.value)}
-        value={selectedThread || ""}
+        onChange={handleSelectChange}
+        value={selectedThread ? selectedThread.id : ""}
       >
-        {/* Opzioni del menu a discesa per i thread */}
+        <option value="">Seleziona un thread</option>
+        {threads.map(thread => (
+          <option key={thread.id} value={thread.id}>
+            {thread.title}
+          </option>
+        ))}
       </select>
-      <div className="file-previews">
-        {/* Anteprime dei file */}
-      </div>
-      <button onClick={() => document.getElementById('fileUpload').click()}>
-        Carica File
-      </button>
-      <input type="file" id="fileUpload" style={{ display: 'none' }} multiple onChange={handleUpload} />
     </div>
   );
 }
