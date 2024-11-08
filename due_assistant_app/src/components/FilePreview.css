@@ -1,0 +1,15 @@
+/* src/components/FilePreview.css */
+.file-preview {
+    display: flex;
+    overflow-x: auto; /* Barra di scorrimento orizzontale */
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .file-thumbnail {
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #f9f9f9;
+    min-width: 100px; /* Larghezza minima per ogni file */
+    text-align: center;
+  }
